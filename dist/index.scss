@@ -1,0 +1,19 @@
+$font-family-sans-serif: 'Noto Sans', system-ui, -apple-system, 'Segoe UI',
+  Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default;
+$body-color: #515151; // body text color. _variables:scss:254
+$info: #a8b9be; // secondary color for bg and all
+@import '~bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300&display=swap');
+
+.open {
+  color: #a2a08c;
+}
+.hidden {
+  display: none;
+  color: #ffffff;
+  transition: color 2s ease;
+}
+.hidden.visible {
+  color: #000;
+}
