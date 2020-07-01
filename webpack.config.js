@@ -32,7 +32,10 @@ Object.keys(extensionsToConvert).forEach((from) => {
   console.log(files)
 })
 
-const pugLoader = ['apply-loader', 'pug-loader']
+const pugLoader = [
+  'apply-loader',
+  { loader: 'pug-loader', options: { pretty: true } },
+]
 
 const sassLoader = [
   { loader: 'css-loader' },
@@ -87,6 +90,18 @@ const config = {
         test: /\.js$/,
         exclude: /node_modules(?!\/wepack-dev-server)/,
         use: jsLoader,
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
+        ],
       },
     ],
   },

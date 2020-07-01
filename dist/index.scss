@@ -6,14 +6,27 @@ $info: #a8b9be; // secondary color for bg and all
 @import '~bootstrap/scss/bootstrap.scss';
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300&display=swap');
 
-.open {
+.collapse {
+  cursor: pointer;
+  display: inline;
   color: #a2a08c;
 }
-.hidden {
+.collapse + input {
   display: none;
-  color: #ffffff;
+}
+.collapse + input + div {
+  display: none;
+}
+.collapse + input:checked + div {
+  display: block;
+  color: #000;
   transition: color 2s ease;
 }
-.hidden.visible {
-  color: #000;
-}
+// .hidden {
+//   display: none;
+//   color: #ffffff;
+//   transition: color 2s ease;
+// }
+// .hidden.visible {
+//   color: #000;
+// }
