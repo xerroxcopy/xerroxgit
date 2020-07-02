@@ -10,7 +10,7 @@ html(lang='en')
       crossorigin='anonymous'
     )
     title Minoru Matsui
-    link(rel='stylesheet', href='style.css')
+    link(rel='stylesheet', href='../style.css')
     script(
       async,
       src='https://www.googletagmanager.com/gtag/js?id=UA-122825964-1'
@@ -26,6 +26,7 @@ html(lang='en')
         height='32'
       )
       span Minoru Matsui is a
+        = " "
         a.toggler(
           data-toggle='collapse',
           href='.scientific',
@@ -104,11 +105,7 @@ html(lang='en')
         aria-controls='cv'
       ) Curriculum Vitae
       span .
-      #cv.collapse
-        .subhead jobs
-        .paragraph
-          strong full time
-      include includes/_cv.pug
+      include ../includes/_cv.pug
 
     script(
       src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js',

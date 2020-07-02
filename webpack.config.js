@@ -70,7 +70,13 @@ const config = {
     rules: [
       {
         test: /\.pug$/,
+        exclude: path.resolve(__dirname, 'src/includes'),
         use: ExtractTextPlugin.extract(pugLoader),
+      },
+      {
+        test: /\.pug$/,
+        exclude: path.resolve(__dirname, 'src/pages'),
+        use: 'pug-loader',
       },
       {
         test: /\.scss$/,
