@@ -1,42 +1,100 @@
 $body-color: rgb(11, 19, 37); // body text color. _variables:scss:254
 $info: #a8b9be; // secondary color for bg and all
 $primary: #a2a08c;
-$font-family: 'Faustina', 'Noto Sans Japanese', serif;
-$font-family-base: $font-family;
+$font-family-serif: 'Faustina', 'Noto Sans Japanese', serif;
+$font-family-sans-serif: 'Karla', system-ui, -apple-system, 'Segoe UI', Roboto,
+  'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
 @import '~bootstrap/scss/bootstrap.scss';
 @import url('https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,467;1,490;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .body {
-  padding-bottom: 5em;
-  padding-top: 5em;
   font-size: 2.5em;
   line-height: 1.7em;
 }
+
+// collapse function
+
 a {
   font-style: italic;
+  color: #110c1a;
   text-decoration: none;
   &[aria-expanded='false'] {
     padding: 0 0 2px 0;
-    border-bottom: 1px solid $primary;
+    border-bottom: 4px solid black;
   }
   transition: border-bottom 250ms ease, color 250ms ease;
   :visited {
-    color: #666666;
+    // color: #666666;
   }
   :hover {
-    color: #a2a08c;
-    border-bottom: 1px dashed #9d4794;
+    // color: #a2a08c;
+    border-bottom: 4px dashed #9d4794;
+  }
+}
+.text-darker {
+  a {
+    color: #ebe2d9;
+    &[aria-expanded='false'] {
+      padding: 0 0 2px 0;
+      border-bottom: 4px solid white;
+    }
   }
 }
 
 .collapse:not(.show) {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0);
 }
 .collapsing {
-  color: white;
+  color: rgba(255, 255, 255, 0);
   transition: none;
 }
 .collapse.show {
   transition: color 2s ease;
+}
+
+// common
+
+.section {
+  margin: 2em 0 0.2em 0;
+}
+
+.subhead {
+  margin: 3em 0 0.3em 0;
+  font: 700 0.7em/1.7em Karla, sans-serif;
+}
+
+.paragraph {
+  margin: 2em 0 0 0;
+  font: 400 0.5em/1.7em Karla, sans-serif;
+}
+
+.datapoint {
+  margin: 2em 0 0 0;
+}
+
+.mono {
+  font-size: 0.8em;
+  font-family: $font-family-monospace;
+  padding-right: 4em;
+}
+
+// sections
+.hello {
+  background-color: #ddcf4c;
+  color: #eeebee;
+}
+.cv {
+  background-color: #8cb8d1;
+  color: #544670;
+}
+.cv-of-failures {
+  background-color: #09131a;
+  color: #0b6a77;
+}
+// bootstrap overrides
+.container-fluid {
+  padding: 4em 1em;
 }

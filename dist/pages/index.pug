@@ -1,111 +1,18 @@
 doctype html
 html(lang='en')
-  head 
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(
-      rel='stylesheet',
-      href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css',
-      integrity='sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I',
-      crossorigin='anonymous'
-    )
-    title Minoru Matsui
-    link(rel='stylesheet', href='../style.css')
-    script(
-      async,
-      src='https://www.googletagmanager.com/gtag/js?id=UA-122825964-1'
-    )
-    script(src='js/google_analytics.js')
+  include ../includes/_head.pug
   body
     //- script(src='js/toggle.js')
-    .container.body
-      object(
-        type='image/svg+xml',
-        data='images/logo.svg',
-        width='32',
-        height='32'
-      )
-      span Minoru Matsui is a
-        = " "
-        a.toggler(
-          data-toggle='collapse',
-          href='.scientific',
-          role='button',
-          aria-expanded='false',
-          aria-controls='scientific1 scientific2'
-        ) scientific
-        = " "
-        a(
-          data-toggle='collapse',
-          href='#designer',
-          role='button',
-          aria-expanded='false',
-          aria-controls='designer'
-        ) designer
-        = " "
-      span#scientific1.scientific.collapse with a Ph.D. in Engineering
-      span#designer.collapse . Design
-        = " "
-        a(
-          href='https://drive.google.com/open?id=1N9jqZXnmCJ6WnJYA3fPqTOutR3oOhtrg'
-        ) portfolio
-      span .
-      = " "
-      #scientific2.scientific.collapse His doctoral research topic is
-        = " "
-        a(
-          data-toggle='collapse',
-          href='#evolutionOfDesign',
-          role='button',
-          aria-expanded='false',
-          aria-controls='evolutionOfDesign'
-        ) evolution of design
-        span .
-        = " "
-        span#evolutionOfDesign.collapse Do you think that designers are creative? His short answer is
-          = " "
-          a(
-            data-toggle='collapse',
-            href='#longAnswer',
-            role='button',
-            aria-expanded='false',
-            aria-controls='longAnswer'
-          ) no
-          span .
-          = " "
-        #longAnswer.collapse The longer answer is that we invent designs randomly, select designs randomly, and transmit designs randomly. He is not the first one to argue so: previous emprical studies can be found
-          a(href='https://www.jstor.org/stable/2694174') here
-          span ,
-          a(
-            href='http://izt.ciens.ucv.ve/ecologia/Archivos/ECOLOGIA_DE%20_POBLACIONES_Hasta%202004/ECOL_POBLAC_Hasta%202004_(A-G)/Bentley%20et%20al%202004.pdf'
-          ) here
-          span ,
-          a(href='https://arxiv.org/abs/cond-mat/0305150') here
-          span and
-          a(href='https://www.nature.com/articles/nature24455') here
-          span . However, he showed that through
-          a(
-            data-toggle='collapse',
-            href='#inTheLab',
-            role='button',
-            aria-expanded='false',
-            aria-controls='inTheLab'
-          ) experiments in the laboratory
-          span , which is a bit of a contribution.
-          span#inTheLab.collapse To understand the design of his experiments, you first need to ... Meh, just read his
-          a(
-            href='https://drive.google.com/open?id=1owLZc0wWeUm1fYUBTzgPLJJoidiBgtE8'
-          ) thesis
-          span .
-      a(
-        data-toggle='collapse',
-        href='#cv',
-        role='button',
-        aria-expanded='false',
-        aria-controls='cv'
-      ) Curriculum Vitae
-      span .
+    script(src='https://unpkg.com/stein-js-client')
+    script
+      include ../js/db.js
+    .body
+      include ../includes/_hello.pug
       include ../includes/_cv.pug
+      include ../includes/_cv_of_failures.pug
+      include ../includes/_sns.pug
+      include ../includes/_contact.pug
+      include ../includes/_more.pug
 
     script(
       src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js',
@@ -117,3 +24,4 @@ html(lang='en')
       integrity='sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/',
       crossorigin='anonymous'
     )
+    script(src='https://unpkg.com/stein-expedite@0.0.4/dist/index.js')

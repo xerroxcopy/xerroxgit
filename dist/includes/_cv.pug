@@ -1,4 +1,39 @@
-#cv.collapse
-  .subhead jobs
-  .paragraph
-    strong full time
+.cv
+  .container-fluid
+    a(
+      data-toggle='collapse',
+      href='#cv',
+      role='button',
+      aria-expanded='false',
+      aria-controls='cv'
+    ) Curriculum Vitae
+    | .
+    #cv.cv.collapse
+      div want CV in PDF?
+      .subhead jobs
+      .paragraph
+        .section full time
+        .row.datapoint.g-0
+          .col-sm-2.mono 2019.09 -
+          .col-sm-10 Freelance designer | engineer, for
+            a(href='http://mylab.co.jp/') myLab
+            | .
+        .row.datapoint.g-0
+          .col-sm-2.mono 
+            strong 2018
+            | .04 -
+            strong 2019
+            | .08
+
+        .row.datapoint.g-0
+          .col-sm-2.mono 2017.05 - 2018.03
+          .col-sm-10 Freelance designer | engineer, for
+            a(href='http://mylab.co.jp/') myLab
+            | .
+      .subhead papers
+      .paragraph
+        .col-sm-10(
+          data-stein-url='https://api.steinhq.com/v1/storages/5efd782883c30d0425e2c5ba/publication',
+          data-stein-limit='100'
+        ) 
+          div {{ date }}
