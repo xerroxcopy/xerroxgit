@@ -7,61 +7,7 @@ html(lang='en')
     script
       include ../js/db.js
     .body
-      .hello
-        .container-fluid
-          .display
-            img.hello__logo(
-              src='../images/logo.svg',
-              width='48px',
-              height='48px'
-            )
-            span Minoru Matsui is a
-              = " "
-              a.expand(
-                data-toggle='collapse',
-                href='.scientific',
-                role='button',
-                aria-expanded='false',
-                aria-controls='scientific1 scientific2'
-              ) scientific
-              = " "
-              a.expand(
-                data-toggle='collapse',
-                href='#designer',
-                role='button',
-                aria-expanded='false',
-                aria-controls='designer'
-              ) designer
-              | .
-          include ../includes/_hello.pug
-          .display
-            a.expand(
-              data-toggle='collapse',
-              href='#cv',
-              role='button',
-              aria-expanded='false',
-              aria-controls='cv'
-            ) Curriculum Vitae
-            | .
-            = " "
-            a.expand(
-              data-toggle='collapse',
-              href='#cv-of-failures',
-              role='button',
-              aria-expanded='false',
-              aria-controls='cv-of-failures'
-            ) CV of failures
-            | .
-            = " "
-            a.expand(
-              data-toggle='collapse',
-              href='#sns',
-              role='button',
-              aria-expanded='false',
-              aria-controls='sns'
-            ) Social Networks and contacts
-            | .
-            = " "
+      include ../includes/_hello.pug
       include ../includes/_cv.pug
       include ../includes/_cv_of_failures.pug
       include ../includes/_sns.pug

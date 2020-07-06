@@ -1,124 +1,134 @@
-#cv-of-failures.cv-of-failures.text-darker.collapse
+.cv-of-failures.text-darker
   .container-fluid
-    .row
-      .col-12.col-md-6.col-lg-3.pr-md-5
-        .subhead rejected jobs
-        .paragraph
-          .row.datapoint.g-0
-            .d-flex.flex-row
-              .mono.pr-5 2020
-              span.font-weight-bold Chiba University
-                span.tiny : wfh not allowed
-          .row.datapoint.g-0
-            .d-flex.flex-row
-              .mono.pr-5 2018
-              span.font-weight-bold BCGDV
-                span.tiny : rejected at 3rd interview
-          .row.datapoint.g-0
-            .d-flex.flex-row
-              .mono.pr-5 2017
-              span.font-weight-bold AIST
-                span.tiny : documents rejected (Ph.D. required)
-          .row.datapoint.g-0
-            .d-flex.flex-row
-              .mono.pr-5 2016
-              span.font-weight-bold
-                img.icon.icon--cv-of-failures-long(
-                  src='https://unpkg.com/simple-icons@latest/icons/hitachi.svg'
-                ) 
-                | Hitachi
-                span.tiny : rejected at an informal meeting
-          .row.datapoint.g-0
-            .d-flex.flex-row
-              .mono.pr-5 2016
-              span.font-weight-bold.font-weight-bold 
-                img.icon.icon--cv-of-failures(
-                  src='https://unpkg.com/simple-icons@latest/icons/mitsubishi.svg'
-                ) 
-                | Mitsubishi Electric
-                span.tiny : told to
-                  = " "
-                  span.font-italic 're-apply after acquiring degree'
-          .row.datapoint.g-0
-            .d-flex.flex-row
-              .mono.pr-5 2012
-              span.font-weight-bold Uchida Yoko
-                span.tiny : rejected at the final interview
-          .row.datapoint.g-0
-            .d-flex.flex-row
-              .mono.pr-5 2012
-              span.font-weight-bold 
-                img.icon.icon--cv-of-failures(
-                  src='https://unpkg.com/simple-icons@latest/icons/mitsubishi.svg'
-                ) 
-                | Mitsubishi Electric
-                span.tiny : refused to see
-          .row.datapoint.g-0
-            .d-flex.flex-row
-              .mono.pr-5 2012
-              span.font-weight-bold Uchida Yoko
-                span.tiny : rejected at the final interview
-          .row.datapoint.g-0
-            .d-flex.flex-row
-              .mono.pr-5 2012
-              span.font-weight-bold 
-                img.icon.icon--cv-of-failures(
-                  src='https://unpkg.com/simple-icons@latest/icons/toshiba.svg'
-                ) 
-                | Toshiba
-                span.tiny : rejected at the design internship
-      .col-12.col-md-6.col-lg-3.pr-md-5
-        .subhead rejected internships
-        .paragraph
-          .row.datapoint.g-0
-            .d-flex.flex-row
-              .mono.pr-5 2011
-              span.font-weight-bold 
-                img.icon.icon--cv-of-failures(
-                  src='https://unpkg.com/simple-icons@latest/icons/fujitsu.svg'
-                ) 
-                | Fujitsu Design
-                span.tiny : documents rejected, later reconsidered
-          .row.datapoint.g-0
-            .d-flex.flex-row
-              .mono.pr-5 2011
-              span.font-weight-bold 
-                img.icon.icon--cv-of-failures-long(
-                  src='https://unpkg.com/simple-icons@latest/icons/samsung.svg'
-                ) 
-                | Samsung Japan
-                span.tiny : documents rejected
-      .col-12.col-md-6.col-lg-3.pr-md-5
-        .subhead lost competitions
-        .paragraph
-          .row.datapoint.g-0
-            .d-flex.flex-row
-              .mono.pr-5 2015
-              span.font-weight-bold Wired Creative Hack Award
-          .row.datapoint.g-0
-            .d-flex.flex-row
-              .mono.pr-5 2011
-              span.font-weight-bold Morisawa Type Design Competition
-      .col-12.col-md-6.col-lg-3.pr-md-5
-        .subhead degree programmes I did not get into
-        .paragraph
-          .row.datapoint.g-0
-            .d-flex.flex-row
-              .mono.pr-5 2007
-              span.font-weight-bold University of Tokyo
-          .row.datapoint.g-0
-            .d-flex.flex-row
-              .mono.pr-5 2007
-              span.font-weight-bold Tokyo Institute of Technology
-      .col-12.col-md-6.col-lg-3.pr-md-5
-        .subhead paper rejections from academic journals
-        .paragraph
-          .row.datapoint.g-0
-            .d-flex.flex-row
-              .mono.pr-5 2016
-              span.font-weight-bold JSSD
-          .row.datapoint.g-0
-            .d-flex.flex-row
-              .mono.pr-5 2016
-              span.font-weight-bold JSSD
-              span (same paper, never published )
+    .display
+      a.expand(
+        data-toggle='collapse',
+        href='#cv-of-failures',
+        role='button',
+        aria-expanded='false',
+        aria-controls='cv'
+      ) CV of Failures
+      | .
+    #cv-of-failures.collapse
+      .row
+        .col-12.col-md-6.col-lg-3.pr-md-5
+          .subhead rejected jobs
+          .paragraph
+            .row.datapoint.g-0
+              .d-flex.flex-row
+                .mono.pr-5 2020
+                span.font-weight-bold Chiba University
+                  span.tiny : wfh not allowed
+            .row.datapoint.g-0
+              .d-flex.flex-row
+                .mono.pr-5 2018
+                span.font-weight-bold BCGDV
+                  span.tiny : rejected at 3rd interview
+            .row.datapoint.g-0
+              .d-flex.flex-row
+                .mono.pr-5 2017
+                span.font-weight-bold AIST
+                  span.tiny : documents rejected (Ph.D. required)
+            .row.datapoint.g-0
+              .d-flex.flex-row
+                .mono.pr-5 2016
+                span.font-weight-bold
+                  img.icon.icon--cv-of-failures-long(
+                    src='https://unpkg.com/simple-icons@latest/icons/hitachi.svg'
+                  ) 
+                  | Hitachi
+                  span.tiny : rejected at an informal meeting
+            .row.datapoint.g-0
+              .d-flex.flex-row
+                .mono.pr-5 2016
+                span.font-weight-bold.font-weight-bold 
+                  img.icon.icon--cv-of-failures(
+                    src='https://unpkg.com/simple-icons@latest/icons/mitsubishi.svg'
+                  ) 
+                  | Mitsubishi Electric
+                  span.tiny : told to
+                    = " "
+                    span.font-italic 're-apply after acquiring degree'
+            .row.datapoint.g-0
+              .d-flex.flex-row
+                .mono.pr-5 2012
+                span.font-weight-bold Uchida Yoko
+                  span.tiny : rejected at the final interview
+            .row.datapoint.g-0
+              .d-flex.flex-row
+                .mono.pr-5 2012
+                span.font-weight-bold 
+                  img.icon.icon--cv-of-failures(
+                    src='https://unpkg.com/simple-icons@latest/icons/mitsubishi.svg'
+                  ) 
+                  | Mitsubishi Electric
+                  span.tiny : refused to see
+            .row.datapoint.g-0
+              .d-flex.flex-row
+                .mono.pr-5 2012
+                span.font-weight-bold Uchida Yoko
+                  span.tiny : rejected at the final interview
+            .row.datapoint.g-0
+              .d-flex.flex-row
+                .mono.pr-5 2012
+                span.font-weight-bold 
+                  img.icon.icon--cv-of-failures(
+                    src='https://unpkg.com/simple-icons@latest/icons/toshiba.svg'
+                  ) 
+                  | Toshiba
+                  span.tiny : rejected at the design internship
+        .col-12.col-md-6.col-lg-3.pr-md-5
+          .subhead rejected internships
+          .paragraph
+            .row.datapoint.g-0
+              .d-flex.flex-row
+                .mono.pr-5 2011
+                span.font-weight-bold 
+                  img.icon.icon--cv-of-failures(
+                    src='https://unpkg.com/simple-icons@latest/icons/fujitsu.svg'
+                  ) 
+                  | Fujitsu Design
+                  span.tiny : documents rejected, later reconsidered
+            .row.datapoint.g-0
+              .d-flex.flex-row
+                .mono.pr-5 2011
+                span.font-weight-bold 
+                  img.icon.icon--cv-of-failures-long(
+                    src='https://unpkg.com/simple-icons@latest/icons/samsung.svg'
+                  ) 
+                  | Samsung Japan
+                  span.tiny : documents rejected
+        .col-12.col-md-6.col-lg-3.pr-md-5
+          .subhead lost competitions
+          .paragraph
+            .row.datapoint.g-0
+              .d-flex.flex-row
+                .mono.pr-5 2015
+                span.font-weight-bold Wired Creative Hack Award
+            .row.datapoint.g-0
+              .d-flex.flex-row
+                .mono.pr-5 2011
+                span.font-weight-bold Morisawa Type Design Competition
+        .col-12.col-md-6.col-lg-3.pr-md-5
+          .subhead degree programmes I did not get into
+          .paragraph
+            .row.datapoint.g-0
+              .d-flex.flex-row
+                .mono.pr-5 2007
+                span.font-weight-bold University of Tokyo
+            .row.datapoint.g-0
+              .d-flex.flex-row
+                .mono.pr-5 2007
+                span.font-weight-bold Tokyo Institute of Technology
+        .col-12.col-md-6.col-lg-3.pr-md-5
+          .subhead paper rejections from academic journals
+          .paragraph
+            .row.datapoint.g-0
+              .d-flex.flex-row
+                .mono.pr-5 2016
+                span.font-weight-bold JSSD
+            .row.datapoint.g-0
+              .d-flex.flex-row
+                .mono.pr-5 2016
+                span.font-weight-bold JSSD
+                span (same paper, never published )
