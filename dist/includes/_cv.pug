@@ -1,6 +1,6 @@
 .cv
   .container-fluid
-    a.expand(
+    a.display.expand(
       data-toggle='collapse',
       href='#cv',
       role='button',
@@ -37,12 +37,4 @@
           data-stein-limit='100'
         ) 
           div {{ date }}
-      .subhead skills
-      .paragraph
-      button.btn.btn-secondary(
-        type='button',
-        data-toggle='tooltip',
-        data-placement='top',
-        title='lalalalalla'
-      ) lelelelel
-//- script(src='../js/tooltip.js')
+      include ../includes/_cv_skills.pug

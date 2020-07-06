@@ -10,7 +10,6 @@ $font-family-sans-serif: 'Karla', system-ui, -apple-system, 'Segoe UI', Roboto,
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .body {
-  font-size: 2.5em;
   line-height: 1.7em;
 }
 
@@ -63,19 +62,21 @@ a {
 }
 
 // common
-
+.display {
+  font: 500 2.5em/1.7 Karla, sans-serif;
+}
 .section {
   margin: 2em 0 0.2em 0;
 }
 
 .subhead {
   margin: 12em 0 1em 0;
-  font: 200 0.3em/1.7 Karla, sans-serif;
+  font: 200 0.8em/1.7 Karla, sans-serif;
 }
 
 .paragraph {
   margin: 0.5em 0 0 0;
-  font: 400 0.5em/1.7em Karla, sans-serif;
+  font: 400 1.4em/1.7em Karla, sans-serif;
 }
 
 .datapoint {
@@ -130,7 +131,8 @@ a {
     }
   }
 }
+
 // bootstrap overrides
 .container-fluid {
-  padding: 4em 1em;
+  padding: 10em 1em;
 }
