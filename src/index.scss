@@ -100,14 +100,23 @@ a {
   background-color: #b1b6b8;
   color: #44374b;
 }
-
-.icons {
+.icon {
   margin: 0 8px 4px;
   width: 21px;
   height: 21px;
   &--sns {
     filter: invert(21%) sepia(6%) saturate(2363%) hue-rotate(235deg)
       brightness(93%) contrast(89%);
+  }
+  &--cv-of-failures {
+    filter: invert(29%) sepia(14%) saturate(5555%) hue-rotate(153deg)
+      brightness(95%) contrast(91%);
+    &-long {
+      filter: invert(29%) sepia(14%) saturate(5555%) hue-rotate(153deg)
+        brightness(95%) contrast(91%);
+      width: 32px;
+      height: 32px;
+    }
   }
 }
 // bootstrap overrides
