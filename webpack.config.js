@@ -23,7 +23,7 @@ const files = {}
 Object.keys(extensionsToConvert).forEach((from) => {
   const to = extensionsToConvert[from]
   globule
-    .find([`**/*.${from}`, `!**/_*.${from}`], { cwd: opts.sourceDirectory })
+    .find([`**/*.${from}`, `!**/_*.${from}`], {cwd: opts.sourceDirectory})
     .forEach((filename) => {
       files[
         filename.replace(new RegExp(`.${from}$`, 'i'), `.${to}`)
@@ -34,22 +34,22 @@ Object.keys(extensionsToConvert).forEach((from) => {
 
 const pugLoader = [
   'apply-loader',
-  { loader: 'pug-loader', options: { pretty: true } },
+  {loader: 'pug-loader', options: {pretty: true}},
 ]
 
 const sassLoader = [
-  { loader: 'css-loader' },
+  {loader: 'css-loader'},
   {
     loader: 'postcss-loader',
     options: {
       ident: 'postcss',
       plugins: [
-        require('cssnano')({ preset: 'default' }),
+        require('cssnano')({preset: 'default'}),
         require('autoprefixer')(),
       ],
     },
   },
-  { loader: 'sass-loader' },
+  {loader: 'sass-loader'},
 ]
 
 const jsLoader = {
@@ -76,7 +76,7 @@ const config = {
       {
         test: /\.pug$/,
         exclude: path.resolve(__dirname, 'src/pages'),
-        use: 'pug-loader',
+        use: {loader: 'pug-loader', options: {pretty: true}},
       },
       {
         test: /\.scss$/,
@@ -113,7 +113,7 @@ const config = {
   },
   plugins: [
     new ExtractTextPlugin('[name]'),
-    new MiniCssExtractPlugin({ filename: 'style.css' }),
+    new MiniCssExtractPlugin({filename: 'style.css'}),
     new CopyPlugin({
       // extensionsToConvertに含まれていないファイルは、単純にコピーする
       patterns: [

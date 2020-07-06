@@ -1,13 +1,12 @@
 $body-color: rgb(11, 19, 37); // body text color. _variables:scss:254
 $info: #a8b9be; // secondary color for bg and all
 $primary: #a2a08c;
-$font-family-serif: 'Faustina', 'Noto Sans Japanese', serif;
+$font-family-serif: 'Noto Sans Japanese', serif;
 $font-family-sans-serif: 'Karla', system-ui, -apple-system, 'Segoe UI', Roboto,
   'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
   'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
 @import '~bootstrap/scss/bootstrap.scss';
-@import url('https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,467;1,490;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .body {
@@ -22,23 +21,30 @@ a {
   color: #110c1a;
   text-decoration: none;
   &[aria-expanded='false'] {
+    // default section collapse style
+    // change .text-darker a&[]... too
     padding: 0 0 2px;
     border-bottom: 4px solid black;
   }
-  transition: border-bottom 250ms ease, color 250ms ease;
-  :visited {
-    // color: #666666;
+  transition: color 250ms ease;
+  &:hover:not(.expand) {
+    border-bottom: 4px solid $primary;
+    color: $primary;
   }
-  :hover {
-    // color: #a2a08c;
-    margin: 0 0 2px;
-    border-bottom: 4px dashed #9d4794;
-  }
+  // .icon :hover {
+  //   // for images
+  //   padding: 4px 4px 0 4px;
+  //   border-bottom: 1px dashed #9d4794;
+  //   color: #2cb8d1;
+  // }
 }
+
 .text-darker {
   a {
     color: #ebe2d9;
     &[aria-expanded='false'] {
+      // default section collapse style
+      // change a&[]... too
       padding: 0 0 2px;
       border-bottom: 4px solid white;
     }
@@ -105,9 +111,10 @@ a {
   }
 }
 .icon {
-  margin: 0 8px 4px;
-  width: 21px;
-  height: 21px;
+  margin: 0 6px 4px;
+  width: 26px;
+  height: 26px;
+  padding: 4px;
   &--sns {
     filter: invert(21%) sepia(6%) saturate(2363%) hue-rotate(235deg)
       brightness(93%) contrast(89%);

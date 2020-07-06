@@ -8,7 +8,7 @@
     )
       span Minoru Matsui is a
         = " "
-        a.toggler(
+        a.expand(
           data-toggle='collapse',
           href='.scientific',
           role='button',
@@ -16,7 +16,7 @@
           aria-controls='scientific1 scientific2'
         ) scientific
         = " "
-        a(
+        a.expand(
           data-toggle='collapse',
           href='#designer',
           role='button',
@@ -35,7 +35,7 @@
       = " "
       #scientific2.scientific.collapse His doctoral research topic is
         = " "
-        a(
+        a.expand(
           data-toggle='collapse',
           href='#evolutionOfDesign',
           role='button',
@@ -46,7 +46,7 @@
         = " "
         span#evolutionOfDesign.collapse Do you think that designers are creative? His short answer is
           = " "
-          a(
+          a.expand(
             data-toggle='collapse',
             href='#longAnswer',
             role='button',
@@ -66,7 +66,7 @@
           span and
           a(href='https://www.nature.com/articles/nature24455') here
           span . However, he showed that through
-          a(
+          a.expand(
             data-toggle='collapse',
             href='#inTheLab',
             role='button',
