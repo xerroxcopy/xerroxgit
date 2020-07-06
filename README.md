@@ -1,4 +1,4 @@
-# packages
+# change svg color
 
-webpack
-bootstrap@next (bootstrap 5)
+https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element
+https://codepen.io/sosuke/pen/Pjoqqp
