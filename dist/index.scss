@@ -71,7 +71,8 @@ a {
 
 .subhead {
   margin: 12em 0 1em 0;
-  font: 200 0.8em/1.7 Karla, sans-serif;
+  font: italic 500 0.8em/1.7 Karla, sans-serif;
+  letter-spacing: 0.05em;
 }
 
 .paragraph {
@@ -95,6 +96,9 @@ a {
 .hello {
   background-color: #e7c429;
   color: #f1f1f1;
+  &__logo {
+    margin: 0 0 24px;
+  }
 }
 .cv {
   background-color: #2cb8d1;
