@@ -22,7 +22,7 @@ a {
   color: #110c1a;
   text-decoration: none;
   &[aria-expanded='false'] {
-    padding: 0 0 2px 0;
+    padding: 0 0 2px;
     border-bottom: 4px solid black;
   }
   transition: border-bottom 250ms ease, color 250ms ease;
@@ -31,6 +31,7 @@ a {
   }
   :hover {
     // color: #a2a08c;
+    margin: 0 0 2px;
     border-bottom: 4px dashed #9d4794;
   }
 }
@@ -38,14 +39,14 @@ a {
   a {
     color: #ebe2d9;
     &[aria-expanded='false'] {
-      padding: 0 0 2px 0;
+      padding: 0 0 2px;
       border-bottom: 4px solid white;
     }
   }
 }
 
 .collapse:not(.show) {
-  color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0.1);
 }
 .collapsing {
   color: rgba(255, 255, 255, 0);
@@ -85,8 +86,8 @@ a {
 }
 // sections
 .hello {
-  background-color: #ddcf4c;
-  color: #eeebee;
+  background-color: #e7c429;
+  color: #f1f1f1;
 }
 .cv {
   background-color: #2cb8d1;
@@ -99,6 +100,9 @@ a {
 .sns {
   background-color: #b1b6b8;
   color: #44374b;
+  &__col {
+    padding: 0 3em 0 0;
+  }
 }
 .icon {
   margin: 0 8px 4px;
