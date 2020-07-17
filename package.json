@@ -18,6 +18,7 @@
     "prettier": "^2.0.5",
     "pug": "^3.0.0",
     "pug-loader": "^2.4.0",
+    "rfs": "^9.0.3",
     "url-loader": "^4.1.0",
     "webpack-dev-server": "^3.11.0"
   },

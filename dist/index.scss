@@ -7,15 +7,20 @@ $font-family-sans-serif: 'Karla', system-ui, -apple-system, 'Segoe UI', Roboto,
   'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 $font-family-monospace: Iosevka, SFMono-Regular, Menlo, Monaco, Consolas,
   'Liberation Mono', 'Courier New', monospace;
+$enable-responsive-font-sizes: true;
+
 @import '~bootstrap/scss/bootstrap.scss';
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import '~rfs/scss';
 
-@font-face {
-  font-family: Iosevka;
-  // src: url('fonts/iosevka-aile-regular.woff2') format('woff2'),
-  // url('fonts/iosevka-aile-regular.woff') format('woff');
-}
+// @font-face {
+//   font-family: Iosevka;
+// src: url('fonts/iosevka-aile-regular.woff2') format('woff2'),
+// url('fonts/iosevka-aile-regular.woff') format('woff');
+// }
 .body {
+  background-color: #09131a;
+  color: #0b6a77;
 }
 
 // collapse function
@@ -101,15 +106,15 @@ a {
 
 // common
 .display {
-  font-size: 2.5em;
+  @include font-size(5rem);
 }
 .section {
-  margin: 2em 0 0.2em 0;
+  margin: 2em 0 0.2em;
   font-weight: 700;
 }
 
 .subhead {
-  margin: 12em 0 3em 0;
+  margin: 0 0 3em;
   font-size: 0.8em;
   letter-spacing: 0.05em;
   &::before {
@@ -122,7 +127,7 @@ a {
 
 .paragraph {
   margin: 0.5em 0 0 0;
-  font-size: 1.4em;
+  font-size: 2em;
 }
 
 .datapoint {
@@ -139,8 +144,6 @@ a {
 }
 // sections
 .hello {
-  background-color: #09131a;
-  color: #0b6a77;
   // background-color: #e7c429;
   // color: #f1f1f1;
   &__logo {
@@ -148,8 +151,6 @@ a {
   }
 }
 .cv {
-  background-color: #09131a;
-  color: #0b6a77;
   // background-color: #2cb8d1;
   // color: #243642;
 }
@@ -164,8 +165,6 @@ a {
   }
 }
 .cv-of-failures {
-  background-color: #09131a;
-  color: #0b6a77;
   &__caption {
     line-height: 1;
   }
@@ -188,8 +187,8 @@ a {
   }
 }
 .sns {
-  background-color: #b1b6b8;
-  color: #44374b;
+  // background-color: #b1b6b8;
+  // color: #44374b;
   &__col {
     padding: 0 3em 0 0;
   }
@@ -205,5 +204,5 @@ a {
 
 // bootstrap overrides
 .container-fluid {
-  padding: 10em 4em;
+  padding: 4em 4em;
 }
