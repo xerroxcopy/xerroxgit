@@ -98,13 +98,13 @@ const config = {
         use: jsLoader,
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|gif|woff|woff2)$/i,
         exclude: /node_modules/,
         use: [
           {
             loader: 'url-loader',
             options: {
-              limit: 8192,
+              limit: 100000,
             },
           },
         ],
