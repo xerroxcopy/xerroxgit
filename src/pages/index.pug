@@ -4,11 +4,9 @@ html(lang='en')
   body
     //- script(src='js/toggle.js')
     script(src='https://unpkg.com/stein-js-client')
-    script
-      include ../js/db.js
-    .body
-      include ../includes/_hello.pug
-      include ../includes/_cv.pug
-      include ../includes/_cv_of_failures.pug
-      include ../includes/_sns.pug
-      include ../includes/_foot.pug
+    script(src='../js/db.js', type='module') 
+    include ../includes/_hello.pug
+    include ../includes/_cv.pug
+    include ../includes/_cv_of_failures.pug
+    include ../includes/_sns.pug
+    include ../includes/_foot.pug

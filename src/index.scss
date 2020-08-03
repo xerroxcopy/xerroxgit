@@ -1,6 +1,9 @@
 $body-color: rgb(11, 19, 37); // body text color. _variables:scss:254
 $info: #a8b9be; // secondary color for bg and all
-$primary: #a2a08c;
+$primary: #0b6a77;
+$accent: #f75020;
+$light: #f5f3e3;
+$bg: #050d13;
 $font-family-serif: 'Noto Sans Japanese', serif;
 $font-family-sans-serif: 'Karla', system-ui, -apple-system, 'Segoe UI', Roboto,
   'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
@@ -12,15 +15,15 @@ $enable-responsive-font-sizes: true;
 @import '~bootstrap/scss/bootstrap.scss';
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import '~rfs/scss';
-
+@import './scss/_globals.scss';
 // @font-face {
 //   font-family: Iosevka;
 // src: url('fonts/iosevka-aile-regular.woff2') format('woff2'),
 // url('fonts/iosevka-aile-regular.woff') format('woff');
 // }
-.body {
-  background-color: #09131a;
-  color: #0b6a77;
+body {
+  background-color: $bg;
+  color: $primary;
 }
 
 // collapse function
@@ -34,7 +37,7 @@ a {
   //   background-size: 1rem 1rem;
   // }
   font-style: italic;
-  color: #110c1a;
+  color: $accent;
   text-decoration: none;
   &[aria-expanded='false'] {
     // default section collapse style
@@ -42,10 +45,16 @@ a {
     padding: 0 0 2px;
     border-bottom: 4px solid black;
   }
-  transition: color 250ms ease;
+  transition: color 250ms ease-in-out;
+  transition: text-shadow 750ms cubic-bezier(0, 2, 0, 1);
   &:hover:not(.expand) {
-    border-bottom: 4px solid $primary;
-    color: $primary;
+    border-bottom: 4px solid $light;
+    color: $light;
+  }
+  &:hover {
+    color: #eb3c25;
+    text-shadow: 0 0 5px rgba($accent, 0.2), 0 0 10px rgba($accent, 0.2),
+      0 0 15px rgba($accent, 0.2);
   }
   // .icon :hover {
   //   // for images
@@ -57,12 +66,12 @@ a {
 
 .text-darker {
   a {
-    color: #ebe2d9;
+    color: $accent;
     &[aria-expanded='false'] {
       // default section collapse style
       // change a&[]... too
       padding: 0 0 2px;
-      border-bottom: 4px solid white;
+      border-bottom: 4px solid $accent;
     }
   }
 }
@@ -114,20 +123,20 @@ a {
 }
 
 .subhead {
-  margin: 0 0 3em;
+  margin: 6em 0 3em;
   font-size: 0.8em;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   &::before {
-    content: '«';
+    content: '';
   }
   &::after {
-    content: '»';
+    content: '';
   }
 }
 
 .paragraph {
   margin: 0.5em 0 0 0;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .datapoint {
@@ -156,12 +165,7 @@ a {
 }
 .cv-skills {
   &__icon {
-    filter: invert(19%) sepia(7%) saturate(2300%) hue-rotate(161deg)
-      brightness(92%) contrast(93%);
-    margin: 0 6px 4px;
-    padding: 4px;
-    width: 26px;
-    height: 26px;
+    @extend %icon;
   }
 }
 .cv-of-failures {
@@ -172,17 +176,11 @@ a {
     margin: 0 0 1.5em 0;
   }
   &__icon {
-    margin: 0 6px 4px;
-    padding: 4px;
-    filter: invert(29%) sepia(14%) saturate(5555%) hue-rotate(153deg)
-      brightness(95%) contrast(91%);
-    width: 26px;
-    height: 26px;
+    @extend %icon;
     &--long {
-      margin: 0 6px 4px;
-      padding: 4px;
-      filter: invert(29%) sepia(14%) saturate(5555%) hue-rotate(153deg)
-        brightness(95%) contrast(91%);
+      @extend %icon;
+      width: 4em;
+      height: 1em;
     }
   }
 }
@@ -193,12 +191,7 @@ a {
     padding: 0 3em 0 0;
   }
   &__icon {
-    margin: 0 6px 4px;
-    padding: 4px;
-    filter: invert(21%) sepia(6%) saturate(2363%) hue-rotate(235deg)
-      brightness(93%) contrast(89%);
-    width: 26px;
-    height: 26px;
+    @extend %icon;
   }
 }
 

@@ -11,61 +11,7 @@
       | .
     #cv.collapse
       div want CV in PDF?
-      .subhead jobs
-      .paragraph
-        .section FULL TIME
-        .row.datapoint.g-0
-          .col-sm-2.mono.
-            #[strong 2019] Sep -
-          .col-sm-10 Freelance designer / engineer
-        .row.datapoint.g-0
-          .col-sm-2.mono.
-            #[strong 2018] Apr - #[strong 2019] Aug
-          .col-sm-10 Designer at Fujitsu Design
-        .row.datapoint.g-0
-          .col-sm-2.mono.
-            #[strong 2017] May - #[strong 2018] Mar
-          .col-sm-10 Project Researcher at Chiba University
-        .section PART TIME
-        .row.datapoint.g-0
-          .col-sm-2.mono.
-            #[strong 2015] Nov - #[strong 2016] Apr
-          .col-sm-10 Researcher at Takram as intern
-        .row.datapoint.g-0
-          .col-sm-2.mono.
-            #[strong 2015] Jun
-          .col-sm-10 Interpreter for Righters Publishing (1 day)
-        .row.datapoint.g-0
-          .col-sm-2.mono.
-            #[strong 2015] Dec - #[strong 2016] Mar
-          .col-sm-10 Interpreter / negotiator for a Dutch journalist Enith Vlooswijk, contract with Stichting de Volkskrant (3 weeks)
-        .row.datapoint.g-0
-          .col-sm-2.mono.
-            #[strong 2014] Oct - #[strong 2014] Dec
-          .col-sm-10 Interpreter / negotiator for Fujitsu Design
-      .subhead education
-      .paragraph
-        .row.datapoint.g-0
-          .col-sm-2.mono.
-            #[strong 2013] Apr - #[strong 2017] Mar 
-          .col-sm-10 Ph.D. in Engineering at Division of Design Science, Chiba University (Acquired degree on 2018 Mar)
-        .row.datapoint.g-0
-          .col-sm-2.mono.
-            #[strong 2014] Sep - #[strong 2015] Jun 
-          .col-sm-10 Visiting researcher. Product Design Course, Glasgow School of Art
-        .row.datapoint.g-0
-          .col-sm-2.mono.
-            #[strong 2011] Apr - #[strong 2013] Mar
-          .col-sm-10 M.S. in Engineering. Division of Design Science, Chiba University
-        .row.datapoint.g-0
-          .col-sm-2.mono.
-            #[strong 2007] Apr - #[strong 2011] Mar
-          .col-sm-10 B.S. in Engineering. Department of System Design Engineering, Keio University
-      .subhead papers
-      .paragraph
-        .col-sm-10(
-          data-stein-url='https://api.steinhq.com/v1/storages/5efd782883c30d0425e2c5ba/publication',
-          data-stein-limit='100'
-        ) 
-          div {{ date }}
+      include ../includes/_cv_jobs.pug
+      include ../includes/_cv_papers.pug
+
       include ../includes/_cv_skills.pug
