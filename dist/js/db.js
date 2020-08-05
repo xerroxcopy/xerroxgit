@@ -90,11 +90,11 @@
 /*!******************!*\
   !*** ./js/db.js ***!
   \******************/
-/*! exports provided: publications */
+/*! exports provided: publications, someVariable */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"publications\", function() { return publications; });\nvar store = new SteinStore('https://api.steinhq.com/v1/storages/5efd782883c30d0425e2c5ba');\nvar publications = [];\nstore.read('publication', {\n  limit: 100,\n  offset: 0\n}).then(function (data) {\n  console.dir(data);\n  publications = data;\n  var publicationTypesArr = publications.map(function (publication) {\n    return publication.type;\n  });\n  console.log(publicationTypesArr);\n  var publicationTypes = publicationTypesArr.filter(function (elem, index, self) {\n    self.indexOf(elem) === index;\n  });\n  console.log('publicationTypes', publicationTypes);\n}); // module.exports = {publications: publications}\n\n//# sourceURL=webpack:///./js/db.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"publications\", function() { return publications; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"someVariable\", function() { return someVariable; });\nvar store = new SteinStore('https://api.steinhq.com/v1/storages/5efd782883c30d0425e2c5ba');\nvar publications = [];\nstore.read('publication', {\n  limit: 100,\n  offset: 0\n}).then(function (data) {\n  console.dir(data);\n  publications = data;\n  var publicationTypesArr = publications.map(function (publication) {\n    return publication.type;\n  });\n  console.log(publicationTypesArr);\n  var publicationTypes = publicationTypesArr.filter(function (elem, index, self) {\n    self.indexOf(elem) === index;\n  });\n  console.log('publicationTypes', publicationTypes);\n});\nvar someVariable = 10;\nconsole.log('someVariable in db', someVariable); // module.exports = {publications: publications}\n\n//# sourceURL=webpack:///./js/db.js?");
 
 /***/ })
 

@@ -1,8 +1,13 @@
 %icon {
-  margin: 0 6px 4px;
-  padding: 4px;
   width: 1em;
   height: 1em;
-  filter: invert(29%) sepia(14%) saturate(5555%) hue-rotate(153deg)
+}
+%svg-color--primary {
+  filter: invert(29%) sepia(14%) saturate(3000%) hue-rotate(153deg)
     brightness(95%) contrast(91%);
+  // used to be saturate(5555) but 4000 seems to work better?
+}
+%svg-color--accent {
+  filter: invert(35%) sepia(79%) saturate(773%) hue-rotate(334deg)
+    brightness(107%) contrast(115%);
 }

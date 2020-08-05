@@ -1,17 +1,16 @@
-.sns.text-darker
+.sns
   .container-fluid
+    a.display.expand(
+      data-toggle='collapse',
+      href='.sns__collapse',
+      role='button',
+      aria-expanded='false',
+      aria-controls='sns'
+    ) Social networks and contacts
+    | .
+    svg.bi(width='32', height='32', fill='currentColor')
+      use(xlink:href='bootstrap-icons.svg#heart-fill')
     .row
-      .col-md-3.sns__col
-        a.display.expand(
-          data-toggle='collapse',
-          href='.sns__collapse',
-          role='button',
-          aria-expanded='false',
-          aria-controls='sns'
-        ) Social Networks and contacts
-        | .
-        svg.bi(width='32', height='32', fill='currentColor')
-          use(xlink:href='bootstrap-icons.svg#heart-fill')
       .col-md-3.sns__col.sns__collapse.collapse
         .subhead know his personality by what he consumes:
         .paragraph 

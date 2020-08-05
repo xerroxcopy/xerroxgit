@@ -104,7 +104,7 @@ const config = {
           {
             loader: 'url-loader',
             options: {
-              limit: 100000,
+              limit: 100000000,
             },
           },
         ],

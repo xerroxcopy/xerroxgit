@@ -14,5 +14,6 @@ store.read('publication', {limit: 100, offset: 0}).then((data) => {
   })
   console.log('publicationTypes', publicationTypes)
 })
-
+export const someVariable = 10
+console.log('someVariable in db', someVariable)
 // module.exports = {publications: publications}

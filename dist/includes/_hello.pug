@@ -1,7 +1,8 @@
 .hello.text-darker
   .container-fluid
-    .display
+    .hello__logo-wrapper
       img.hello__logo(src='../images/logo.svg', width='100px', height='100px')
+    .display 
       span Minoru Matsui is a
         = " "
         a.expand(
@@ -19,18 +20,15 @@
           aria-expanded='false',
           aria-controls='designer'
         ) designer
-        | .
-        = " "
       span#scientific1.scientific.collapse 
         = " "
-        | with a Ph.D. in Engineering.
-        = " "
-      span#designer.collapse Design
+        | with a Ph.D. in Engineering
+      span#designer.collapse . Design
         = " "
         a.download(
           href='https://drive.google.com/open?id=1N9jqZXnmCJ6WnJYA3fPqTOutR3oOhtrg'
         ) portfolio
-        | .
+      span .
         = " "
       #scientific2.scientific.collapse His doctoral research topic is
         = " "
