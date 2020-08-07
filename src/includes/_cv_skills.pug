@@ -1,9 +1,17 @@
 .cv-skills
   .head SKILLS
-  .row
-    .col-12.col-lg-6.col-xl-3.pr-md-5
-      .subhead programming
-      .paragraph
+  .paragraph
+    span
+      a.expand(
+        data-toggle='collapse',
+        href='#cv-skills__programming',
+        role='button',
+        aria-expanded='false',
+        aria-controls='cv'
+      ) Programming
+      | .
+      = " "
+      span#cv-skills__programming.collapse
         span He codes
         img.cv-skills__icon(
           src='https://unpkg.com/simple-icons@latest/icons/r.svg',
@@ -184,9 +192,17 @@
           container='body'
         )
         | .
-    .col-12.col-lg-6.col-xl-3.pr-md-5
-      .subhead design
-      .paragraph
+      span
+        a.expand(
+          data-toggle='collapse',
+          href='#cv-skills__design',
+          role='button',
+          aria-expanded='false',
+          aria-controls='cv'
+        ) Design
+        | .
+        = " "
+      span#cv-skills__design.paragraph.collapse
         | He uses
         img.cv-skills__icon(
           src='https://unpkg.com/simple-icons@latest/icons/figma.svg',
@@ -258,9 +274,7 @@
           title='affinity designer',
           container='body'
         )
-        | .
-        br
-        | He loves modelling.
+        | . He loves modelling.
         img.cv-skills__icon(
           src='https://unpkg.com/simple-icons@latest/icons/rhinoceros.svg',
           data-toggle='tooltip',
@@ -284,9 +298,17 @@
           title='cinema4d',
           container='body'
         ) 
-    .col-12.col-lg-6.col-xl-3.pr-md-5
-      .subhead likes
-      .paragraph
+      span 
+        a.expand(
+          data-toggle='collapse',
+          href='#cv-skills__misc',
+          role='button',
+          aria-expanded='false',
+          aria-controls='cv'
+        ) Interests and minimum experiences
+        | .
+        = " "
+      span#cv-skills__misc.paragraph.collapse
         | Uses
         img.cv-skills__icon(
           src='https://unpkg.com/simple-icons@latest/icons/firefox.svg',
@@ -359,7 +381,7 @@
           title='1password',
           container='body'
         ) 
-        | to forget all those gibberish passwords.
+        | .
         | Zealous
         img.cv-skills__icon(
           src='https://unpkg.com/simple-icons@latest/icons/apple.svg',
@@ -368,10 +390,7 @@
           title='apple',
           container='body'
         )
-        | user of over 10 years.
-    .col-12.col-lg-6.col-xl-3.pr-md-5
-      .subhead interests
-      .paragraph He is a newbie on
+        | user of over 10 years. Minimum experiences in
         img.cv-skills__icon(
           src='https://unpkg.com/simple-icons@latest/icons/keras.svg',
           data-toggle='tooltip',
@@ -379,6 +398,7 @@
           title='keras',
           container='body'
         )
+        | ,
         img.cv-skills__icon(
           src='https://unpkg.com/simple-icons@latest/icons/tensorflow.svg',
           data-toggle='tooltip',
@@ -386,7 +406,7 @@
           title='tensorflow',
           container='body'
         )
-        | and
+        | ,
         img.cv-skills__icon(
           src='https://unpkg.com/simple-icons@latest/icons/kaggle.svg',
           data-toggle='tooltip',
@@ -394,7 +414,7 @@
           title='kaggle',
           container='body'
         )
-        | , and he can mark up simple equasions using
+        | ,
         img.cv-skills__icon(
           src='https://unpkg.com/simple-icons@latest/icons/latex.svg',
           data-toggle='tooltip',
@@ -402,8 +422,8 @@
           title='latex',
           container='body'
         )
-        | but he hasn't used it as document generator yet.
-        | Minimum experience on
+        | ,
+
         img.cv-skills__icon(
           src='https://unpkg.com/simple-icons@latest/icons/drupal.svg',
           data-toggle='tooltip',

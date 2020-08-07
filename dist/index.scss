@@ -14,6 +14,14 @@ $font-family-monospace: Iosevka, SFMono-Regular, Menlo, Monaco, Consolas,
   'Liberation Mono', 'Courier New', monospace;
 $enable-responsive-font-sizes: true;
 $rfs-breakpoint: 1920px; // default 1200px
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1400px,
+  xxl: 1920px,
+);
 @font-face {
   font-family: Iosevka Aile;
   src: url('./fonts/iosevka-aile-regular.woff2');
@@ -48,13 +56,11 @@ a {
   color: $accent;
   text-decoration: none;
   &[aria-expanded='false'] {
-    // default section collapse style
-    // change .text-darker a&[]... too
     padding: 0 0 2px;
     border-bottom: 4px solid $accent;
   }
-  transition: color 250ms ease-in-out;
-  transition: text-shadow 750ms cubic-bezier(0, 2, 0, 1);
+  transition: color 250ms ease-in-out,
+    text-shadow 750ms cubic-bezier(0, 2, 0, 1);
   &:hover:not(.expand) {
     border-bottom: 4px solid $light;
     color: $light;
@@ -73,14 +79,15 @@ a {
 }
 
 .collapse:not(.show) {
-  color: rgba(255, 255, 255, 0.1);
+  color: rgba($primary, 0.1);
+  transition: color 2s ease-out, alpha 2s ease-out;
 }
 .collapsing {
-  color: rgba(255, 255, 255, 0);
+  color: rgba($primary, 0);
   transition: none;
 }
 .collapse.show {
-  transition: color 2s ease;
+  transition: color 2s ease-out, alpha 2s ease-out;
 }
 
 // style various types of link
@@ -119,8 +126,8 @@ a {
 }
 
 .head {
-  margin: 0.2em 0 0.1em;
-  color: rgba($primary, 0.25);
+  // color: rgba($primary, 0.25);
+  color: #0a30354f;
   @include font-size(12rem);
   font-weight: 300;
   letter-spacing: 0.2em;
@@ -130,10 +137,9 @@ a {
 
 .subhead {
   background-color: $accent;
-
   color: $bg;
   display: inline-flex;
-  // padding: 0em 0.3em 0 0.3em;
+  padding: 0em 0.3em;
   // border-top: 1px solid $accent;
   border: 1px solid rgba($primary, 0.2);
   margin: 2em 0 2em;
@@ -141,15 +147,15 @@ a {
   text-transform: uppercase;
   // letter-spacing: 0.1em;
   &::before {
-    content: '§';
+    content: '»';
   }
   &::after {
-    content: '';
+    content: '«';
   }
 }
 
 .paragraph {
-  margin: 0.5em 0;
+  margin: 0.1em 0 0.5em;
   @include font-size(2rem);
 }
 
@@ -163,7 +169,7 @@ a {
 }
 .tiny {
   // color: rgba($secondary, 0.5);
-  color: $primary;
+  // color: $primary;
   margin: 1em 0;
   font-size: 0.8em;
   font-weight: 200;
@@ -213,7 +219,7 @@ a {
   }
 }
 .sns {
-  // background-color: #b1b6b8;
+  // background-color: #b1b6b8;1
   // color: #44374b;
   &__col {
     padding: 0 3em 0 0;
@@ -223,6 +229,9 @@ a {
     padding: 4px;
     @extend %icon;
     @extend %svg-color--accent;
+    &:hover {
+      @extend %svg-color--light;
+    }
   }
 }
 
