@@ -7,7 +7,7 @@
   .col-12.col-lg-6.col-xl-4.col-xxl-3.pr-md-5.pb-5
     .mono #[strong {{start_year}}] {{start_month}} - #[strong {{end_year}}] {{end_month}}
     .paragraph 
-      a(href='{{ where_url }}') {{where}}
+      a(href='{{where_url}}') {{where}}
       = " — "
       | {{what}}
     .tiny {{detail_en}}
@@ -19,7 +19,7 @@
   .col-12.col-lg-6.col-xl-4.col-xxl-3.pr-md-5.pb-5
     .mono #[strong {{start_year}}] {{start_month}} - #[strong {{end_year}}] {{end_month}} (duration: {{duration}})
     .paragraph 
-      a(href='{{ where_url }}') {{contract_with}}
+      a(href='{{where_url}}') {{contract_with}}
       = " — "
       | {{what}}
     .tiny {{detail_en}}
@@ -49,6 +49,6 @@
     .mono #[strong 2007] 4 - #[strong 2011] 3
     .paragraph B.S. in Engineering
     .tiny 
-    a(href='http://www.sd.keio.ac.jp/eng/') Keio University
-    = " "
-    | Department of System Design Engineering
+      a(href='http://www.sd.keio.ac.jp/eng/') Keio University
+      = " "
+      | Department of System Design Engineering

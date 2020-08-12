@@ -10,7 +10,7 @@
 
     .tiny.
       {{author}} {{journal}} #[strong {{volume}}]{{issue}} {{pages}}.
-    .tiny doi: #[a(href='{{ paper_doi }}') {{paper_doi}}] | #[a(href='{{ manuscript_url }}') Manuscript] ({{manuscript_type}})
+    .tiny doi: #[a(href='https://doi.org/{{paper_doi}}') {{paper_doi}}] | #[a(href='{{manuscript_url}}') Manuscript] ({{manuscript_type}})
     .tiny {{summary_en}}
 .subhead oral & poster presentations
 .row(
@@ -24,11 +24,11 @@
     .tiny.
       {{author}} {{conference}} at {{location}}.
     .tiny doi:
-      a(href='{{ manuscript_doi }}') {{manuscript_doi}}
+      a(href='https://doi.org/{{manuscript_doi}}') {{manuscript_doi}}
       | |
-      a(href='{{ manuscript_url }}') {{manuscript_type}}
+      a(href='{{manuscript_url}}') {{manuscript_type}}
       | |
-      a(href='{{ slide_url }}') {{slide_type}}
+      a(href='{{slide_url}}') {{slide_type}}
     .tiny {{summary_en}}
 .subhead thesis
 .row(
@@ -40,7 +40,7 @@
     .paragraph {{title}}
 
     .tiny {{author}} {{type}}. {{pages}}
-    .tiny #[a(href='{{ slide_url }}') defense slide ({{slide_type}}, {{slide_size}})] | #[a(href='{{ manuscript_url }}') ({{manuscript_type}} {{manuscript_size}})]
+    .tiny #[a(href='{{slide_url}}') defense slide ({{slide_type}}, {{slide_size}})] | #[a(href='{{manuscript_url}}') ({{manuscript_type}} {{manuscript_size}})]
     .tiny {{summary_en}}
 .subhead awards
 .row(
@@ -50,4 +50,4 @@
   .col-12.col-lg-6.col-xl-4.col-xxl-3.pr-md-5.pb-5
     .mono #[strong {{year}}]
     .paragraph {{title}}
-    .tiny {{contributed_as}}. #[a(href='{{ url }}') {{award}}]. #[strong {{prize}}].
+    .tiny {{contributed_as}}. #[a(href='{{url}}') {{award}}]. #[strong {{prize}}].

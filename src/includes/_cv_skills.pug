@@ -7,7 +7,7 @@
         href='#cv-skills__programming',
         role='button',
         aria-expanded='false',
-        aria-controls='cv'
+        aria-controls='cv-skills__programming'
       ) Programming
       | .
       = " "
@@ -198,7 +198,7 @@
           href='#cv-skills__design',
           role='button',
           aria-expanded='false',
-          aria-controls='cv'
+          aria-controls='cv-skills__design'
         ) Design
         | .
         = " "
@@ -298,14 +298,34 @@
           title='cinema4d',
           container='body'
         ) 
+        | and
+        img.cv-skills__icon(
+          src='https://unpkg.com/simple-icons@latest/icons/autodesk.svg',
+          data-toggle='tooltip',
+          data-placement='top',
+          title='autodesk',
+          container='body'
+        ) 
+        | 3ds Max.
+      span 
+        a.expand(
+          data-toggle='collapse',
+          href='#cv-skills__english',
+          role='button',
+          aria-expanded='false',
+          aria-controls='cv-skills__english'
+        ) English
+        | .
+        = " "
+      span#cv-skills__english.paragraph.collapse TOEIC: 985 (2015 9), TOEFL-iBT: 107 (2013 6).
       span 
         a.expand(
           data-toggle='collapse',
           href='#cv-skills__misc',
           role='button',
           aria-expanded='false',
-          aria-controls='cv'
-        ) Interests and minimum experiences
+          aria-controls='cv-skills__misc'
+        ) Some other miscellaneous skills
         | .
         = " "
       span#cv-skills__misc.paragraph.collapse
