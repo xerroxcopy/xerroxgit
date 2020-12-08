@@ -17,4 +17,10 @@ this will generate `dist/` folder. previously, I had to move `dist/pages/index.h
 
 # deploy
 
-move `dist` files into `/xerroxcopy.github.io` and ... push it ...?
+changed 1copy `dist` files into `/xerroxcopy.github.io` ,
+
+```
+$ cd xerroxcopy.github.io
+$ git commig -m 'blabla'
+$ git push -u origin master
+```
