@@ -7,6 +7,8 @@ https://codepen.io/sosuke/pen/Pjoqqp
 
 edit `src/pages/index.pug` and pugs in `src/includes`.
 
+for jobs and publications, edit [google spreadsheet](https://docs.google.com/spreadsheets/d/1U_YL-vY2TaUQC-kdwoIxCnJLnCqQ84k9K1rKiJKHaCg/edit#gid=0). this works as long as stein works.
+
 # build
 
 ```
@@ -15,12 +17,17 @@ $ npm run build
 
 this will generate `dist/` folder. previously, I had to move `dist/pages/index.html` to `dist/index.html` and change relative paths (`../../` things like links to css).
 
+# check
+
+open `dist/pages/index.html`. If everything looks fine, proceed to deploy.
+
 # deploy
 
-changed 1copy `dist` files into `/xerroxcopy.github.io` ,
+copy everything in `dist` directory (overriding everything should be fine) into `/xerroxcopy.github.io`, and push.
 
 ```
 $ cd xerroxcopy.github.io
-$ git commig -m 'blabla'
+$ git add .
+$ git commit -m 'blabla'
 $ git push -u origin master
 ```
