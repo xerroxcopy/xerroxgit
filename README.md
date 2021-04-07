@@ -19,7 +19,7 @@ this will generate `dist/` folder. previously, I had to move `dist/pages/index.h
 
 # check
 
-open `dist/pages/index.html`. If everything looks fine, proceed to deploy.
+open `dist/pages/index.html`. If everything looks fine, proceed to deploy. Make sure it's `dist/pages/index.html`, not `dist/index.html` which redirects you to github pages.
 
 # deploy
 
@@ -31,3 +31,5 @@ $ git add .
 $ git commit -m 'blabla'
 $ git push -u origin master
 ```
+
+don't forget to push the `xerroxgit` repository too!
