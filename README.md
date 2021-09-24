@@ -5,7 +5,7 @@ https://codepen.io/sosuke/pen/Pjoqqp
 
 # edit
 
-edit `src/pages/index.pug` and pugs in `src/includes`.
+edit `src/pages/index.pug` at f.a's gdrive and pugs in `src/includes`.
 
 for jobs and publications, edit [google spreadsheet](https://docs.google.com/spreadsheets/d/1U_YL-vY2TaUQC-kdwoIxCnJLnCqQ84k9K1rKiJKHaCg/edit#gid=0). this works as long as stein works.
 
